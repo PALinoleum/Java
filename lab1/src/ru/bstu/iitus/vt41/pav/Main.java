@@ -19,6 +19,10 @@ public class Main {
 
         Person[] people = new Person[n];
 
+        int bestAge, currentAge;
+        int bestPerson = 0;
+        bestAge = 100;
+
         for (int i = 0; i < n; i++) {
             System.out.println("Введите тип персоны");
             String type = scanner.nextLine();
@@ -47,13 +51,6 @@ public class Main {
                     System.out.println("Нет соответствующей персоны");
                     break;
             }
-        }
-
-        int bestAge, currentAge;
-        int bestPerson = 0;
-        bestAge = people[0].getWeight();
-
-        for(int i = 0; i < n; i++){
             currentAge = people[i].getWeight();
             if(currentAge < bestAge){
                 bestAge = currentAge;
@@ -78,15 +75,15 @@ abstract class Person {
         this.name = scanner.nextLine();
         this.age = scanner.nextInt();
         scanner.nextLine();
-    };
+    }
 
     public String getName(){
         return this.name;
-    };
+    }
 
     public int getWeight(){
         return this.age;
-    };
+    }
 
     public abstract String toString();
 }
@@ -102,7 +99,7 @@ class Student extends Person{
 
         this.gradebook = scanner.nextLine();
 
-    };
+    }
 
     public String toString(){
 
@@ -122,7 +119,7 @@ class Retiree extends Person{
 
         this.pension = scanner.nextLine();
 
-    };
+    }
 
     public String toString(){
 
@@ -142,7 +139,7 @@ class Employee extends Person{
 
         this.workbook = scanner.nextLine();
 
-    };
+    }
 
     public String toString(){
 
@@ -163,7 +160,7 @@ class Teacher extends Employee{
         this.workbook = scanner.nextLine();
         this.license = scanner.nextLine();
 
-    };
+    }
 
     public String toString(){
 
@@ -184,7 +181,7 @@ class Clerk extends Employee{
         this.workbook = scanner.nextLine();
         this.salary = scanner.nextLine();
 
-    };
+    }
 
     public String toString(){
 
