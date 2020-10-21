@@ -1,6 +1,5 @@
-package ru.bstu.iitus.vt41.pav.pers;
+package ru.bstu.iitus.vt41.pav.person;
 
-import ru.bstu.iitus.vt41.pav.Person;
 import java.util.Scanner;
 
 public class Retiree extends Person{

@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.pav;
+package ru.bstu.iitus.vt41.pav.person;
 
 import java.util.Scanner;
 
@@ -9,9 +9,9 @@ public abstract class Person {
 
     public void init(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Последовательно ведите Имя и Возраст:");
-
+        System.out.println("Введите Имя: ");
         this.name = scanner.nextLine();
+        System.out.println("Введите Возраст: ");
         this.age = scanner.nextInt();
         scanner.nextLine();
     }

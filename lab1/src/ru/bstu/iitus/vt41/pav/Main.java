@@ -1,7 +1,7 @@
 package ru.bstu.iitus.vt41.pav;
 
-import ru.bstu.iitus.vt41.pav.pers.emp.*;
-import ru.bstu.iitus.vt41.pav.pers.*;
+import ru.bstu.iitus.vt41.pav.person.employee.*;
+import ru.bstu.iitus.vt41.pav.person.*;
 import java.util.Scanner;
 
 //ВТ-41 Подкопаев Антон Лабораторная №1
@@ -26,7 +26,7 @@ public class Main {
         bestAge = 100;
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Введите тип персоны");
+            System.out.println("Введите тип персоны: Студент, Секретарь, Учитель, Пенсионер");
             String type = scanner.nextLine();
             switch (type) {
                 case  ("Студент"):

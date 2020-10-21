@@ -1,6 +1,5 @@
-package ru.bstu.iitus.vt41.pav.pers.emp;
+package ru.bstu.iitus.vt41.pav.person.employee;
 
-import ru.bstu.iitus.vt41.pav.pers.Employee;
 import java.util.Scanner;
 
 public class Teacher extends Employee{
