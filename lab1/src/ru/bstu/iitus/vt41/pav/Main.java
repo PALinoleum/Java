@@ -1,6 +1,8 @@
 package ru.bstu.iitus.vt41.pav;
-import java.util.Scanner;
 
+import ru.bstu.iitus.vt41.pav.pers.emp.*;
+import ru.bstu.iitus.vt41.pav.pers.*;
+import java.util.Scanner;
 
 //ВТ-41 Подкопаев Антон Лабораторная №1
 public class Main {
@@ -60,132 +62,5 @@ public class Main {
 
         System.out.println("\nСамый легкий человек:");
         System.out.println(people[bestPerson].toString());
-    }
-}
-
-abstract class Person {
-
-    public String name;
-    public int age;
-
-    public void init(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Последовательно ведите Имя и Возраст:");
-
-        this.name = scanner.nextLine();
-        this.age = scanner.nextInt();
-        scanner.nextLine();
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
-    public int getWeight(){
-        return this.age;
-    }
-
-    public abstract String toString();
-}
-
-class Student extends Person{
-
-    private String gradebook;
-
-    public void studInit(){
-        this.init();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите Номер зачетки:");
-
-        this.gradebook = scanner.nextLine();
-
-    }
-
-    public String toString(){
-
-        return "Имя: " + this.name + " Возраст: " + this.age + "\n" +
-                "Номер зачетки: " + this.gradebook;
-    }
-}
-
-class Retiree extends Person{
-
-    private String pension;
-
-    public void retInit(){
-        this.init();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите Размер пенсии:");
-
-        this.pension = scanner.nextLine();
-
-    }
-
-    public String toString(){
-
-        return "Имя: " + this.name + " Возраст: " + this.age + "\n" +
-                "Размер пенсии: " + this.pension;
-    }
-}
-
-class Employee extends Person{
-
-    public String workbook;
-
-    public void empInit(){
-        this.init();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите Номер трудовой книжки:");
-
-        this.workbook = scanner.nextLine();
-
-    }
-
-    public String toString(){
-
-        return "Имя: " + this.name + " Возраст: " + this.age + "\n" +
-                "Трудовая книжка: " + this.workbook;
-    }
-}
-
-class Teacher extends Employee{
-
-    private String license;
-
-    public void teachInit(){
-        this.init();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите Номер трудовой книжки и Номер лицензии:");
-
-        this.workbook = scanner.nextLine();
-        this.license = scanner.nextLine();
-
-    }
-
-    public String toString(){
-
-        return "Имя: " + this.name + " Возраст: " + this.age + "\n" +
-                "Трудовая книжка: " + this.workbook + " Лицензия: " + this.license;
-    }
-}
-
-class Clerk extends Employee{
-
-    private String salary;
-
-    public void clerkInit(){
-        this.init();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите Номер трудовой книжки и Размер зарплаты:");
-
-        this.workbook = scanner.nextLine();
-        this.salary = scanner.nextLine();
-
-    }
-
-    public String toString(){
-
-        return "Имя: " + this.name + " Возраст: " + this.age + "\n" +
-                "Трудовая книжка: " + this.workbook + " Зарплата: " + this.salary;
     }
 }
